@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           echo 'Start - Installing project dependencies'
-          run pnpm Install
+          pnpm Install
           echo 'End - Installing project dependencies'
 
       - name: Lint
