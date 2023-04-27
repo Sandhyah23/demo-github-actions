@@ -30,7 +30,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     outputs:
-      script-file: ${{ steps.publishJSFilename.scriptFile }}
+      script-file: ${{ steps.publishJSFilename.outputs.scriptFile }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
