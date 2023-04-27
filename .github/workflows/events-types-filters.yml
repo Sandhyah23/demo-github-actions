@@ -1,8 +1,7 @@
 name: Demo Events Types Filters
 on:
-  pull_request:
-    types: [opened, edited, reopened]
-    branches: main
+  # pull_request:
+  #   branches: main
   workflow_dispatch:
 
 jobs:
@@ -23,14 +22,10 @@ jobs:
           version: 7
 
       - name: Install dependencies
-        run: |
-          echo 'Start - Installing project dependencies'
-          pnpm install
-          echo 'End - Installing project dependencies'
+        run: pnpm install
 
       - name: Lint
         run: pnpm lint
 
       - name: build
-        if: always()
         run: pnpm build
